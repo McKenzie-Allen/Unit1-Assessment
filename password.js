@@ -12,14 +12,13 @@ reader.question("Please enter your password. \n", function(input) {
     if (input.length >= 10) {
         reader.close()
     } else {
-        console.log("Password is shorter than 10 chareters. please make it longer.")
-            // reader.setPrompt("Password is shorter than 10 chareters. please make it longer.")
+        console.log("Password is shorter than 10 characters. please make it longer.")
         reader.prompt
         reader.on("line", (input) => {
             if (input.length >= 10) {
                 reader.close()
             } else {
-                reader.setPrompt("The password you have entered is shorter then 10 charaters please try again \n")
+                reader.setPrompt("The password you have entered is still shorter then 10 characters please try again. \n")
                 reader.prompt()
             }
         })
